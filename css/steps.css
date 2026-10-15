@@ -1,0 +1,11 @@
+/* Passos — como funciona */
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;list-style:none;margin:0;padding:0}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:28px}
+.step .n{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--ink);color:var(--bg);font:800 18px var(--f-d);margin-bottom:22px}
+.step h3{font-size:24px}
+.step p{margin-top:10px;font-size:15px;color:var(--ink-2)}
+.chip{display:inline-block;margin-top:20px;padding:11px 16px;border-radius:99px;background:var(--surface-2);font-size:14px;font-weight:600}
+.chip u{text-decoration:none;color:var(--brand)}
+:root[data-theme="dark"] .chip u{color:var(--lime)}
+@media (max-width:860px){.steps{grid-template-columns:1fr}}

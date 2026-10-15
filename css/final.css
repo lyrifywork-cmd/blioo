@@ -1,0 +1,10 @@
+/* Caixa final */
+
+.final{margin:0 0 clamp(56px,7vw,96px)}
+.final-box{background:var(--ink);color:var(--bg);border-radius:clamp(26px,4vw,44px);padding:clamp(44px,7vw,96px) clamp(24px,5vw,72px);position:relative;overflow:hidden}
+.final-box::after{content:"";position:absolute;width:420px;height:420px;right:-100px;bottom:-160px;border-radius:50%;background:var(--lime);opacity:.9;filter:blur(2px)}
+.final-box>*{position:relative;z-index:1}
+.final h2{font-size:clamp(36px,6vw,76px);max-width:13ch}
+.final p{margin-top:18px;opacity:.7;max-width:42ch}
+.final .btn-ghost{background:transparent;color:var(--bg);border-color:rgba(255,255,255,.3)}
+.final .btn-main{background:var(--lime);color:var(--on-lime)}

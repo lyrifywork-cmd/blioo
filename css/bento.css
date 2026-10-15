@@ -1,0 +1,16 @@
+/* Bento de recursos */
+
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.cell{grid-column:span 2;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:36px;min-height:210px;transition:transform .25s var(--ease),box-shadow .25s}
+.cell:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.cell.w{grid-column:span 3}
+.cell.big{grid-column:span 4;background:var(--brand);color:var(--on-brand);border-color:var(--brand)}
+.cell h3{font-size:clamp(22px,2.2vw,28px);letter-spacing:-.025em}
+.cell p{font-size:15px;color:var(--ink-2);margin-top:8px}
+.cell.big p{color:inherit;opacity:.8}
+.tag{align-self:flex-start;font-size:12px;font-weight:600;padding:6px 12px;border-radius:99px;background:var(--lime);color:var(--on-lime)}
+.tag.soon{background:var(--surface-2);color:var(--ink-2)}
+.ico{width:44px;height:44px;border-radius:14px;background:var(--surface-2);display:grid;place-items:center;font-size:20px}
+.cell.big .ico{background:rgba(255,255,255,.16)}
+@media (max-width:900px){.bento{grid-template-columns:1fr 1fr}.cell,.cell.w,.cell.big{grid-column:span 1}.cell.big{grid-column:span 2}}
+@media (max-width:560px){.bento{grid-template-columns:1fr}.cell.big{grid-column:auto}}

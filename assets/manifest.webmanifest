@@ -1,0 +1,15 @@
+{
+  "name": "Blioo — tudo o que você faz, em um só link",
+  "short_name": "Blioo",
+  "description": "Crie uma página com a sua identidade e reúna projetos, redes sociais e conteúdo em um único endereço.",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F4F5EF",
+  "theme_color": "#F4F5EF",
+  "icons": [
+    { "src": "img/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" },
+    { "src": "img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "any" }
+  ]
+}

@@ -1,0 +1,22 @@
+/* Páginas legais (privacidade, termos) — documentos com cabeçalho enxuto */
+
+/* Voltar: pílula de vidro que funciona em qualquer largura */
+.back{padding:13px 20px;font:600 14px/1 var(--f-t);color:var(--ink);text-decoration:none;flex:none}
+
+.legal h1{font-size:clamp(40px,6.4vw,80px);max-width:18ch}
+.legal{padding-top:clamp(120px,14vw,170px)}
+
+.doc{max-width:760px}
+.doc-block{margin-top:clamp(40px,5vw,64px)}
+.doc-block:first-child{margin-top:0}
+.doc h2{font-size:clamp(23px,2.6vw,30px);max-width:none;letter-spacing:-.025em}
+.doc p{margin-top:14px;font-size:16.5px;line-height:1.65;color:var(--ink)}
+.doc ul{margin:14px 0 0;padding-left:22px;display:grid;gap:8px}
+.doc li{font-size:16.5px;line-height:1.6;padding-left:4px}
+.doc li::marker{color:var(--brand)}
+.doc a{color:var(--brand);text-decoration:underline;text-underline-offset:3px}
+.doc strong{font-weight:600}
+.doc-callout{margin-top:clamp(40px,5vw,64px);background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:28px}
+.doc-callout h2{font-size:22px;letter-spacing:-.02em}
+.doc-callout p{margin-top:8px;font-size:15px;color:var(--ink-2)}
+.doc-callout a{font-weight:600}

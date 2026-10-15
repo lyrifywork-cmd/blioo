@@ -1,0 +1,8 @@
+/* Marquee */
+
+.strip{border-block:1px solid var(--line);overflow:hidden;padding:18px 0;background:var(--surface)}
+.track{display:flex;gap:44px;width:max-content;animation:slide 32s linear infinite;font:700 clamp(20px,2.6vw,30px)/1 var(--f-d);letter-spacing:-.02em}
+.track span{display:flex;align-items:center;gap:44px;white-space:nowrap}
+.track span::after{content:"✦";color:var(--brand);font-size:.7em}
+:root[data-theme="dark"] .track span::after{color:var(--lime)}
+@keyframes slide{to{transform:translateX(-50%)}}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Configurações — Blioo</title>
+<meta name="description" content="Identificador, e-mail, plano e conta da sua página Blioo.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F5EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0A0E0C" media="(prefers-color-scheme: dark)">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Configurações — Blioo">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blioo.app/configuracoes.html">
+<meta property="og:locale" content="pt_BR">
+<link rel="canonical" href="https://blioo.app/configuracoes.html">
+<link rel="icon" href="assets/img/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="assets/manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/main.css?v=5">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="hdr" id="topo">
+  <div class="wrap hdr-in">
+    <a class="pill brand" href="index.html" aria-label="Blioo — início">blioo<i>.</i></a>
+    <div class="acts">
+      <a class="btn btn-ghost" href="pagina.html">Ver minha página</a>
+      <span class="pill" style="padding:5px"><span class="dash-avatar" id="dash-avatar" aria-hidden="true">B</span></span>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo">
+<section class="sec dash">
+  <div class="wrap">
+    <header class="dash-top">
+      <div>
+        <p class="eyebrow">Painel</p>
+        <h1>Olá, <span id="dash-handle">seunome</span>.</h1>
+        <p class="note"><span id="dash-url">blioo.app/seunome</span> · plano Grátis</p>
+      </div>
+    </header>
+
+    <div class="dash-grid">
+      <nav class="dash-nav" aria-label="Seções do painel">
+        <a href="dashboard.html">Visão geral</a>
+        <a href="links.html">Links</a>
+        <a href="aparencia.html">Aparência</a>
+        <a href="metricas.html">Métricas <span class="tag soon">Em breve</span></a>
+        <a href="dominio.html">Domínio <span class="tag soon">Em breve</span></a>
+        <a href="configuracoes.html" aria-current="page">Configurações</a>
+      </nav>
+
+      <div class="dash-main">
+        <div class="view active" id="view-config">
+          <h2>Configurações</h2>
+          <div class="settings">
+            <div class="dcard">
+              <div class="field">
+                <label for="identificador">Identificador</label>
+                <div class="prefix-box">
+                  <span class="prefix">blioo.app/</span>
+                  <input id="identificador" name="identificador" type="text" autocomplete="username" value="anasolano" maxlength="30">
+                </div>
+                <p class="hint">Depois de criar a página, o identificador pode ser mudado uma vez.</p>
+              </div>
+            </div>
+            <div class="dcard">
+              <div class="field">
+                <label for="conta-email">E-mail da conta</label>
+                <input id="conta-email" type="email" value="ana@exemplo.com" readonly>
+                <p class="hint">Fale com o suporte para trocar o e-mail de acesso.</p>
+              </div>
+            </div>
+            <div class="dcard dcard-row">
+              <div>
+                <h2 style="font-size:22px">Plano Grátis</h2>
+                <p class="note" style="margin-top:8px">R$ 0 — links ilimitados e identificador próprio.</p>
+              </div>
+              <a class="btn btn-main" href="index.html#precos">Assinar o Pro</a>
+            </div>
+            <div class="dcard dcard-row">
+              <div>
+                <h2 style="font-size:22px">Sair</h2>
+                <p class="note" style="margin-top:8px">Encerra a sessão neste dispositivo, sem apagar sua página.</p>
+              </div>
+              <button class="btn btn-ghost" type="button" id="btn-logout">Sair da conta</button>
+            </div>
+            <div class="dcard danger-zone dcard-row">
+              <div>
+                <h2 style="font-size:22px">Excluir conta</h2>
+                <p class="note" style="margin-top:8px">Apaga sua página, seus links e seus dados. Ação permanente.</p>
+              </div>
+              <button class="btn btn-danger" type="button" id="btn-danger">Excluir minha conta</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<script type="module" src="js/shell.js?v=6"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 560" role="img" aria-label="Composição abstrata do projeto Estúdio">
+  <rect width="920" height="560" fill="#F4F5EF"/>
+  <circle cx="250" cy="280" r="180" fill="none" stroke="#EAECE3" stroke-width="2"/>
+  <circle cx="250" cy="280" r="120" fill="none" stroke="#0E5E49" stroke-width="2" opacity=".45"/>
+  <circle cx="250" cy="280" r="60" fill="#0E5E49"/>
+  <g fill="none" stroke="#0C1210" stroke-width="2">
+    <rect x="520" y="120" width="280" height="200"/>
+    <path d="M520 260h280M520 200h280M520 160h280"/>
+  </g>
+  <rect x="520" y="360" width="130" height="90" fill="#0C1210"/>
+  <rect x="670" y="360" width="130" height="90" fill="none" stroke="#0C1210" stroke-width="2"/>
+  <circle cx="770" cy="120" r="26" fill="none" stroke="#0C1210" stroke-width="2"/>
+  <text x="60" y="500" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26" font-weight="600" fill="#56605A" letter-spacing="6">BLIOO.SEUNOME</text>
+</svg>

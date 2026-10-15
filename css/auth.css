@@ -1,0 +1,47 @@
+/* Telas de conta (entrar, criar conta) */
+
+.auth{padding-top:clamp(120px,14vw,170px)}
+.auth-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,72px);align-items:center}
+.auth h1{font-size:clamp(40px,6vw,80px);max-width:16ch}
+
+/* Cartão do formulário */
+.auth-card{background:var(--surface);border:1px solid var(--line);border-radius:clamp(22px,3vw,30px);padding:clamp(24px,3vw,36px);box-shadow:var(--shadow);display:grid;gap:20px}
+
+/* Alternância entrar / criar conta */
+.tabs{display:flex;gap:2px;padding:4px;background:var(--surface-2);border-radius:99px}
+.tabs a{flex:1;text-align:center;padding:10px 12px;border-radius:99px;font:600 14px/1 var(--f-t);color:var(--ink-2);text-decoration:none;transition:background-color .2s,color .2s}
+.tabs a:hover{color:var(--ink)}
+.tabs a[aria-current]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+
+/* Formulário */
+.auth-form{display:grid;gap:16px}
+.field{display:grid;gap:8px}
+.field label{font-size:14px;font-weight:600}
+.field-row{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.field-link{font-size:13.5px;font-weight:500;color:var(--ink-2);text-decoration:none}
+.field-link:hover{color:var(--ink)}
+.field input{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--bg);color:var(--ink);font:400 15px/1.4 var(--f-t);transition:border-color .2s var(--ease)}
+.field input::placeholder{color:var(--ink-2);opacity:.7}
+.field input:focus{border-color:var(--brand)}
+.field .hint{font-size:13px;color:var(--ink-2)}
+.prefix-box{display:flex;align-items:center;padding:0 16px;border:1px solid var(--line);border-radius:14px;background:var(--bg);transition:border-color .2s var(--ease)}
+.prefix-box:focus-within{border-color:var(--brand)}
+.prefix-box .prefix{font:500 15px var(--f-t);color:var(--ink-2);white-space:nowrap}
+.prefix-box input{border:0;background:none;padding:14px 0;padding-left:4px}
+.prefix-box input:focus-visible{outline:none}
+.check{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--ink-2);line-height:1.5}
+.check input{margin:2px 0 0;width:16px;height:16px;flex:none;accent-color:var(--brand)}
+.check a{color:var(--brand)}
+.auth-card .btn{width:100%}
+.auth-card .btn-ghost{background:var(--bg)}
+.or{display:flex;align-items:center;gap:12px;font-size:13px;color:var(--ink-2)}
+.or::before,.or::after{content:"";flex:1;height:1px;background:var(--line)}
+.oauth{display:grid;gap:10px;justify-items:center}
+.btn.is-soon{opacity:.55;cursor:not-allowed}
+.btn.is-soon:hover{transform:none}
+.auth-alt{font-size:14.5px;color:var(--ink-2);text-align:center}
+.auth-alt a{color:var(--brand);font-weight:600}
+.auth-note{font-size:13.5px;color:var(--ink-2);text-align:center}
+.auth-note a{color:var(--brand)}
+.form-error{background:var(--surface-2);border:1px solid var(--line);border-left:3px solid var(--brand);border-radius:14px;padding:12px 16px;font-size:14px;color:var(--ink)}
+@media (max-width:900px){.auth-grid{grid-template-columns:1fr}.auth-card{max-width:520px}}

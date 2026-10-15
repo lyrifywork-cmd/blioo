@@ -1,0 +1,10 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-label="Trabalho fictício 3 — textura de impressão">
+  <rect width="220" height="220" fill="#F4F5EF"/>
+  <g stroke="#0C1210" stroke-width="3" stroke-linecap="round">
+    <path d="M30 170c20-40 40-40 60 0s40 40 60 0"/>
+    <path d="M30 140c20-40 40-40 60 0s40 40 60 0" opacity=".55"/>
+    <path d="M30 110c20-40 40-40 60 0s40 40 60 0" opacity=".3"/>
+  </g>
+  <circle cx="170" cy="56" r="24" fill="none" stroke="#0E5E49" stroke-width="3"/>
+  <rect x="30" y="30" width="52" height="16" fill="#0C1210"/>
+</svg>

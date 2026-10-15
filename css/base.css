@@ -1,0 +1,17 @@
+/* BLIOO — reset, tipografia base e utilitários de layout */
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--f-t);-webkit-font-smoothing:antialiased;padding-bottom:env(safe-area-inset-bottom,0px)}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{font-family:var(--f-d);font-weight:800;letter-spacing:-.035em;line-height:1.02}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--brand);outline-offset:3px}
+[hidden]{display:none!important}
+
+/* Largura de conteúdo */
+.wrap{width:min(1160px,calc(100% - 40px));margin-inline:auto}
+
+/* Acessibilidade: pular para o conteúdo */
+.skip{position:absolute;left:16px;top:-80px;z-index:100;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:99px}
+.skip:focus{top:12px}

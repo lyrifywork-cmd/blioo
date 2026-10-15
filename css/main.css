@@ -1,0 +1,24 @@
+/* BLIOO — ponto de entrada dos estilos.
+   A ordem dos @import preserva a cascata: tokens → base → componentes → seções → motion.
+   Novo componente = novo arquivo + uma linha de @import aqui. */
+
+@import "tokens.css";
+@import "base.css";
+@import "buttons.css";
+@import "header.css";
+@import "hero.css";
+@import "marquee.css";
+@import "sections.css";
+@import "bento.css";
+@import "steps.css";
+@import "themes.css";
+@import "pricing.css";
+@import "faq.css";
+@import "final.css";
+@import "footer.css";
+@import "legal.css";
+@import "auth.css";
+@import "onboarding.css";
+@import "dashboard.css";
+@import "pagina.css";
+@import "motion.css";

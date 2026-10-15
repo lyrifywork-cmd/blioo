@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Criar conta — Blioo</title>
+<meta name="description" content="Crie sua conta Blioo, escolha seu endereço e coloque sua página no ar em poucos minutos.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F5EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0A0E0C" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Criar conta — Blioo">
+<meta property="og:description" content="Crie sua página Blioo em poucos minutos.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blioo.app/criar-conta.html">
+<meta property="og:image" content="assets/img/og-cover.png">
+<meta property="og:locale" content="pt_BR">
+<link rel="canonical" href="https://blioo.app/criar-conta.html">
+<link rel="icon" href="assets/img/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="assets/manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/main.css?v=5">
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="hdr" id="topo">
+  <div class="wrap hdr-in">
+    <a class="pill brand" href="index.html" aria-label="Blioo — início">blioo<i>.</i></a>
+    <a class="pill back" href="index.html">Voltar</a>
+  </div>
+</header>
+
+<main id="conteudo">
+<section class="sec auth">
+  <div class="wrap auth-grid">
+    <header class="head">
+      <p class="eyebrow">Conta</p>
+      <h1>Sua página começa aqui.</h1>
+      <p class="lede">Escolha seu endereço, adicione seus links e compartilhe. Leva poucos minutos para ficar no ar.</p>
+      <p class="note">Comece no plano Grátis — o Pro você assina quando quiser.</p>
+    </header>
+    <div class="auth-card">
+      <nav class="tabs" aria-label="Alternar entre entrar e criar conta">
+        <a href="entrar.html">Entrar</a>
+        <a href="criar-conta.html" aria-current="page">Criar conta</a>
+      </nav>
+      <form class="auth-form" id="form-criar" action="onboarding.html" novalidate>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="voce@email.com" required>
+        </div>
+        <div class="field">
+          <label for="identificador">Identificador</label>
+          <div class="prefix-box">
+            <span class="prefix">blioo.app/</span>
+            <input id="identificador" name="identificador" type="text" autocomplete="username" placeholder="seunome" pattern="[a-zA-Z0-9._-]{3,30}" maxlength="30" aria-describedby="id-ajuda" required>
+          </div>
+          <p class="hint" id="id-ajuda">Só letras, números, ponto, hífen e sublinhado. Depois de criar, você pode mudar uma vez.</p>
+        </div>
+        <div class="field">
+          <label for="senha">Senha</label>
+          <input id="senha" name="senha" type="password" autocomplete="new-password" placeholder="Mínimo de 8 caracteres" minlength="8" required>
+        </div>
+        <label class="check" for="aceite">
+          <input id="aceite" name="aceite" type="checkbox" required>
+          <span>Concordo com os <a href="termos.html">Termos de uso</a> e a <a href="privacidade.html">Política de Privacidade</a>.</span>
+        </label>
+        <button class="btn btn-main" type="submit">Criar minha página</button>
+      </form>
+      <p class="or">ou</p>
+      <div class="oauth">
+        <span class="btn btn-ghost is-soon" aria-disabled="true"><svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24s.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>Continuar com o Google</span>
+        <span class="tag soon">Em breve</span>
+      </div>
+      <p class="auth-alt">Já tem conta? <a href="entrar.html">Entrar</a></p>
+      <p class="auth-note">Plano Grátis para sempre. Veja os <a href="index.html#precos">planos e preços</a>.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<script type="module" src="js/auth.js?v=5"></script>
+</body>
+</html>

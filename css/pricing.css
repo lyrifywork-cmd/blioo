@@ -1,0 +1,26 @@
+/* Preços */
+
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.plan{display:flex;flex-direction:column;gap:24px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:28px;transition:transform .25s var(--ease),box-shadow .25s}
+.plan:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.plan.feat{background:var(--ink);color:var(--bg);border:1px solid color-mix(in srgb,var(--lime) 35%,transparent)}
+.plan-top h3{font-size:28px}
+.plan-desc{font-size:15px;color:var(--ink-2);margin-top:6px}
+.plan.feat .plan-desc{color:inherit;opacity:.7}
+.price{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.price b{font:800 clamp(38px,4.2vw,52px)/1 var(--f-d);letter-spacing:-.03em}
+.price span{font-size:14px;color:var(--ink-2)}
+.plan.feat .price span{color:inherit;opacity:.7}
+.feats{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.feats li{display:flex;gap:10px;font-size:15px}
+.feats li::before{content:"✓";color:var(--brand);font-weight:600}
+.plan.feat .feats li::before{color:var(--lime)}
+.feats .soon{color:var(--ink-2)}
+.plan.feat .feats .soon{color:inherit;opacity:.7}
+.feats em{font-style:normal;font-size:12px;font-weight:600;padding:3px 8px;border-radius:99px;background:var(--surface-2);color:var(--ink-2)}
+.plan.feat .feats em{background:rgba(255,255,255,.16);color:inherit}
+.plan .btn{margin-top:auto;align-self:flex-start}
+.plan .tag.soon{margin-top:auto}
+.plan.feat .btn-main{background:var(--lime);color:var(--on-lime)}
+.plan.feat .btn-ghost{background:transparent;color:var(--bg);border-color:rgba(255,255,255,.3)}
+@media (max-width:860px){.plans{grid-template-columns:1fr}}

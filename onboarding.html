@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Montar minha página — Blioo</title>
+<meta name="description" content="Escolha seu endereço, adicione seus links, escolha um tema e publique sua página Blioo em três passos.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F5EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0A0E0C" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Montar minha página — Blioo">
+<meta property="og:description" content="Três passos para a sua página Blioo ir ao ar.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blioo.app/onboarding.html">
+<meta property="og:image" content="assets/img/og-cover.png">
+<meta property="og:locale" content="pt_BR">
+<link rel="canonical" href="https://blioo.app/onboarding.html">
+<link rel="icon" href="assets/img/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="assets/manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/main.css?v=5">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="hdr" id="topo">
+  <div class="wrap hdr-in">
+    <a class="pill brand" href="index.html" aria-label="Blioo — início">blioo<i>.</i></a>
+    <a class="pill back" href="index.html">Voltar</a>
+  </div>
+</header>
+
+<main id="conteudo">
+<section class="sec onb">
+  <div class="wrap onb-grid">
+    <div class="onb-main">
+      <header class="head">
+        <p class="eyebrow">Onboarding</p>
+        <h1>Sua página em três passos.</h1>
+        <p class="lede">Endereço, links e tema. O que você digitar aparece na pré-visualização, na hora.</p>
+      </header>
+
+      <ol class="prog" aria-label="Progresso">
+        <li data-state="current"><b>1</b>Endereço</li>
+        <li data-state="pending"><b>2</b>Links</li>
+        <li data-state="pending"><b>3</b>Tema</li>
+      </ol>
+
+      <div class="panel">
+        <div class="pane active" id="pane-1">
+          <h2>Escolha seu endereço</h2>
+          <div class="field">
+            <label for="identificador">Identificador</label>
+            <div class="prefix-box">
+              <span class="prefix">blioo.app/</span>
+              <input id="identificador" name="identificador" type="text" autocomplete="username" placeholder="seunome" pattern="[a-zA-Z0-9._-]{3,30}" maxlength="30" value="seunome">
+            </div>
+            <p class="hint">Só letras, números, ponto, hífen e sublinhado. <span class="tag" id="disp">Disponível</span></p>
+          </div>
+        </div>
+
+        <div class="pane" id="pane-2">
+          <h2>Adicione seus links</h2>
+          <p class="note" style="margin-top:0">Projeto, loja, vídeo, newsletter — quantos você precisar.</p>
+          <div class="link-rows" id="link-rows"></div>
+          <button class="btn btn-ghost" type="button" id="btn-add-link">+ Adicionar link</button>
+        </div>
+
+        <div class="pane" id="pane-3">
+          <h2>Escolha um tema</h2>
+          <p class="note" style="margin-top:0">Você pode trocar quando quiser.</p>
+          <div class="themes">
+            <label class="theme t1"><input type="radio" name="tema" value="essencial" checked><span class="mini" aria-hidden="true"><i></i><i></i><i></i></span><span><b>Essencial</b><small>Página limpa: nome, links e contato.</small></span></label>
+            <label class="theme t2"><input type="radio" name="tema" value="estudio"><span class="mini" aria-hidden="true"><i></i><i></i><i></i></span><span><b>Estúdio</b><small>Cor cheia e tipografia grande, para quem vive de imagem.</small></span></label>
+            <label class="theme t3"><input type="radio" name="tema" value="profissional"><span class="mini" aria-hidden="true"><i></i><i></i><i></i></span><span><b>Profissional</b><small>Direto ao ponto, do portfólio ao agendamento.</small></span></label>
+          </div>
+        </div>
+
+        <div class="pane" id="pane-4">
+          <div class="done-mark" aria-hidden="true">✓</div>
+          <h2>Sua página está no ar.</h2>
+          <p>blioo.app/seunome já pode ir para a sua bio. Copie o link ou continue ajustando os detalhes quando quiser.</p>
+          <div class="done-actions">
+            <a class="btn btn-main" href="dashboard.html">Ir para o painel</a>
+            <button class="btn btn-ghost" type="button" id="btn-copy" data-copy="https://blioo.app/seunome"><span aria-live="polite">Copiar blioo.app/seunome</span></button>
+          </div>
+          <p class="note" style="margin-top:0">Quer ajustar algo antes? <a href="#passo-2" id="btn-edit" style="color:var(--brand);font-weight:600">Editar links</a>.</p>
+        </div>
+
+        <div class="onb-actions">
+          <button class="btn btn-ghost" type="button" id="btn-back">Voltar</button>
+          <button class="btn btn-main" type="button" id="btn-next">Próximo</button>
+        </div>
+      </div>
+    </div>
+
+    <aside class="onb-aside" aria-label="Pré-visualização da página">
+      <p class="eyebrow" style="margin-bottom:0">Pré-visualização</p>
+      <figure class="phone" style="margin:0 auto">
+        <div class="screen" id="screen">
+          <div class="av" id="pv-av" aria-hidden="true">BL</div>
+          <h3 id="pv-name">seunome</h3>
+          <p id="pv-sub">blioo.app/seunome</p>
+          <div id="pv-links"></div>
+        </div>
+      </figure>
+      <p class="note">É assim que sua página aparece no celular.</p>
+    </aside>
+  </div>
+</section>
+</main>
+
+
+<script type="module" src="js/onboarding.js?v=5"></script>
+</body>
+</html>

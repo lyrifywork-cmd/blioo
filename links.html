@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Links — Blioo</title>
+<meta name="description" content="Adicione, edite, reordene ou desative os links da sua página Blioo.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F5EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0A0E0C" media="(prefers-color-scheme: dark)">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Links — Blioo">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blioo.app/links.html">
+<meta property="og:locale" content="pt_BR">
+<link rel="canonical" href="https://blioo.app/links.html">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="assets/img/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="assets/manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/main.css?v=5">
+<link rel="modulepreload" href="js/shell.js?v=6">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="hdr" id="topo">
+  <div class="wrap hdr-in">
+    <a class="pill brand" href="index.html" aria-label="Blioo — início">blioo<i>.</i></a>
+    <div class="acts">
+      <a class="btn btn-ghost" href="pagina.html" id="btn-ver">Ver minha página</a>
+      <span class="pill" style="padding:5px"><span class="dash-avatar" id="dash-avatar" aria-hidden="true">B</span></span>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo">
+<section class="sec dash" aria-labelledby="dash-titulo">
+  <div class="wrap">
+    <header class="dash-top">
+      <div>
+        <p class="eyebrow">Painel · Links</p>
+        <h1 id="dash-titulo">Olá, <span id="dash-handle">seunome</span>.</h1>
+        <p class="note"><span id="dash-url">blioo.app/seunome</span> · plano Grátis</p>
+      </div>
+    </header>
+
+    <div class="dash-grid">
+      <nav class="dash-nav" aria-label="Seções do painel">
+        <a href="dashboard.html">Visão geral</a>
+        <a href="links.html" aria-current="page">Links</a>
+        <a href="aparencia.html">Aparência</a>
+        <a href="metricas.html">Métricas <span class="tag soon">Em breve</span></a>
+        <a href="dominio.html">Domínio <span class="tag soon">Em breve</span></a>
+        <a href="configuracoes.html">Configurações</a>
+      </nav>
+
+      <div class="dash-main">
+        <div class="view active" id="view-links">
+          <div class="links-layout">
+            <div class="links-main">
+
+              <div class="view-head">
+                <div>
+                  <h2>Links</h2>
+                  <p class="note" style="margin-top:8px">Cole, edite, reordene ou desative. <span id="links-count"></span></p>
+                </div>
+                <button class="btn btn-ghost" type="button" id="btn-add-link">+ Link com detalhes</button>
+              </div>
+
+              <noscript>
+                <div class="dcard">
+                  <h2 style="font-size:22px">Ative o JavaScript</h2>
+                  <p class="note" style="margin-top:8px">O painel de links precisa do JavaScript para funcionar. Ative-o no navegador e recarregue a página.</p>
+                </div>
+              </noscript>
+
+              <!-- Adição rápida: cole o endereço e aperte Enter -->
+              <form class="quick" id="quick-form" novalidate>
+                <label class="vh" for="quick-url">Endereço do novo link</label>
+                <input id="quick-url" name="url" type="text" inputmode="url" enterkeyhint="go" placeholder="Cole um endereço, ex.: instagram.com/voce" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="quick-help quick-msg">
+                <button class="btn btn-main" type="submit">Adicionar</button>
+              </form>
+              <p class="hint" id="quick-help">Aperte Enter para adicionar. O nome é sugerido pelo endereço e você pode mudá-lo depois.</p>
+              <p class="hint" id="quick-msg" role="status" aria-live="polite"></p>
+
+              <!-- Busca, filtros e ação em massa -->
+              <div class="links-tools" id="links-tools" role="search" aria-label="Buscar e filtrar links" hidden>
+                <div class="search">
+                  <label class="vh" for="links-search">Buscar links</label>
+                  <input id="links-search" type="search" enterkeyhint="search" placeholder="Buscar por nome ou endereço…" autocomplete="off" spellcheck="false" aria-controls="dash-links">
+                </div>
+                <div class="chips" role="group" aria-label="Filtrar por estado">
+                  <button class="chip" type="button" data-filter="todos" aria-pressed="true" aria-controls="dash-links">Todos <span data-count="todos">0</span></button>
+                  <button class="chip" type="button" data-filter="ativos" aria-pressed="false" aria-controls="dash-links">Ativos <span data-count="ativos">0</span></button>
+                  <button class="chip" type="button" data-filter="desativados" aria-pressed="false" aria-controls="dash-links">Desativados <span data-count="desativados">0</span></button>
+                </div>
+                <button class="tool-btn" type="button" id="btn-bulk" aria-controls="dash-links">Desativar todos</button>
+              </div>
+              <p class="hint" id="links-hint"></p>
+
+              <div class="dash-links" id="dash-links"></div>
+
+              <div class="dcard empty" id="links-empty" hidden>
+                <h2 style="font-size:22px">Nenhum link ainda</h2>
+                <p class="note" style="margin-top:8px">Cole um endereço no campo acima e aperte Enter. O nome é sugerido automaticamente e você pode mudar depois.</p>
+                <div><button class="btn btn-main" type="button" id="btn-empty-add">Adicionar o primeiro link</button></div>
+              </div>
+
+              <div class="dcard empty" id="links-noresult" hidden>
+                <h2 style="font-size:22px">Nada encontrado</h2>
+                <p class="note" style="margin-top:8px">Nenhum link combina com a busca ou o filtro escolhido.</p>
+                <div><button class="btn btn-ghost" type="button" id="btn-clear-filters">Limpar busca e filtros</button></div>
+              </div>
+
+              <!-- Ajuda: formatos aceitos e boas práticas -->
+              <details class="dcard help" id="links-help">
+                <summary>Que endereços funcionam?</summary>
+                <ul>
+                  <li><b>Sites e redes:</b> <code>seusite.com/pagina</code>. O <code>https://</code> é adicionado sozinho.</li>
+                  <li><b>WhatsApp:</b> <code>wa.me/5589999999999</code> (país + DDD + número, só dígitos).</li>
+                  <li><b>E-mail:</b> <code>mailto:voce@exemplo.com</code></li>
+                  <li><b>Telefone:</b> <code>tel:+5589999999999</code></li>
+                </ul>
+                <p class="hint">Dicas: deixe o mais importante no topo, use nomes curtos e desative em vez de apagar o que for voltar depois.</p>
+              </details>
+            </div>
+
+            <aside class="links-preview" aria-label="Pré-visualização da página">
+              <p class="eyebrow" style="margin-bottom:0">Pré-visualização</p>
+              <div id="preview-mount"></div>
+              <a class="btn btn-ghost" href="pagina.html">Abrir minha página</a>
+            </aside>
+          </div>
+
+          <!-- Aviso temporário (link removido, adicionado, etc.) -->
+          <div class="toast" id="links-toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+            <span id="toast-msg"></span>
+            <button class="tool-btn" type="button" id="toast-undo" hidden>Desfazer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<script type="module" src="js/shell.js?v=6"></script>
+</body>
+</html>

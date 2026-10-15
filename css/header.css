@@ -1,0 +1,30 @@
+/* Header flutuante: cada peça é uma pílula separada */
+
+.hdr{position:fixed;z-index:50;left:0;right:0;top:calc(14px + env(safe-area-inset-top,0px));pointer-events:none}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.pill{pointer-events:auto;display:flex;align-items:center;background:var(--glass);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);border:1px solid var(--line);border-radius:99px;box-shadow:var(--shadow)}
+.brand{padding:10px 20px;font:800 24px/1 var(--f-d);letter-spacing:-.04em;text-decoration:none}
+.brand i{color:var(--brand);font-style:normal}
+:root[data-theme="dark"] .brand i{color:var(--lime)}
+.nav{gap:2px;padding:5px}
+.nav a{font-size:14.5px;font-weight:500;color:var(--ink-2);text-decoration:none;padding:9px 16px;border-radius:99px;transition:background-color .2s,color .2s}
+.nav a:hover{color:var(--ink)}
+.nav a[aria-current]{background:var(--ink);color:var(--bg)}
+.acts{display:flex;gap:8px;pointer-events:none}
+.acts .btn{pointer-events:auto;padding:13px 20px;font-size:14px;box-shadow:var(--shadow)}
+.acts .btn-ghost{background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.menu-btn{display:none;pointer-events:auto;font:600 14px var(--f-t);color:var(--ink);padding:13px 20px;cursor:pointer}
+.sheet{display:none}
+
+@media (max-width:960px){
+  .nav,.acts .btn-ghost{display:none}
+  .menu-btn{display:block}
+  .hdr-in{flex-wrap:wrap}
+  .sheet{display:none;pointer-events:auto;width:100%;flex-direction:column;gap:4px;padding:12px;background:var(--glass);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow)}
+  .sheet a{padding:14px 16px;border-radius:16px;text-decoration:none;font-weight:500}
+  .sheet a:hover{background:var(--surface-2)}
+  body.open .sheet{display:flex}
+  .acts{margin-left:auto;margin-right:8px}
+  .hdr-in{justify-content:flex-start}
+}
+@media (max-width:520px){.acts .btn-main{padding:13px 16px}}

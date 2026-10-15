@@ -1,0 +1,14 @@
+/* Exemplos — temas */
+
+.themes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.theme{border-radius:var(--r);padding:26px;min-height:300px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line)}
+.theme .mini{display:grid;gap:9px}
+.theme .mini i{display:block;height:34px;border-radius:99px;background:currentColor;opacity:.16}
+.theme .mini i:first-child{opacity:1;background:var(--lime);}
+.t1{background:var(--surface)}
+.t2{background:linear-gradient(160deg,#0E5E49,#0A2A22);color:#EEF1EA}
+.t3{background:#15131C;color:#F1EEF7}
+.t3 .mini i:first-child{background:#B9A6FF}
+.theme h3{font-size:28px}
+.theme p{font-size:14.5px;opacity:.75;margin-top:6px}
+@media (max-width:860px){.themes{grid-template-columns:1fr}.theme{min-height:240px}}
