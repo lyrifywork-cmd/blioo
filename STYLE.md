@@ -282,7 +282,7 @@ Peças separadas em pílulas de vidro, nunca uma barra sólida:
 | `index.html` | Marketing normal, CTAs intactos | CTAs de conta → `onboarding.html` | CTAs de conta → `dashboard.html` |
 | `entrar.html` / `criar-conta.html` (`js/auth.js`) | Formulário funciona; submit sem JS segue o `action` | Rebate para `onboarding.html` | Rebate para `dashboard.html` |
 | `onboarding.html` | Redireciona para `criar-conta.html` | Livre | Livre (relê o estado salvo) |
-| `dashboard.html` e demais páginas do painel | Redireciona para `entrar.html` | Redireciona para `onboarding.html` | Livre |
+| `app/dashboard.html` e demais páginas do painel | Redireciona para `entrar.html` | Redireciona para `onboarding.html` | Livre |
 
 - Cadastro (`criar-conta`): grava conta + sessão + identificador no estado e leva a `onboarding.html`.
 - Login (`entrar`): e-mail confere com a conta salva → sessão + destino certo; e-mail desconhecido → `.form-error` com `role="alert"`, sem navegar, oferecendo criar a conta.
@@ -346,19 +346,22 @@ Peças separadas em pílulas de vidro, nunca uma barra sólida:
 
 ```
 index.html              landing (única com JS: menu, scrollspy, reveal, copy)
-entrar.html             tela de login    ─┐
-criar-conta.html        tela de cadastro ─┴→ CSS: css/auth.css
-onboarding.html         3 passos até publicar ─┴→ CSS: css/onboarding.css + js/onboarding.js
-dashboard.html          visão geral do painel ─┬→ CSS: css/dashboard.css
-links.html              gestão de links         │   + js/dashboard.js / js/links.js
-aparencia.html          temas + pré-visualização │   + js/aparencia.js (cada página, seu módulo)
-metricas.html           em breve (estática)     │   + js/app.js (só guarda + identidade)
-dominio.html             em breve (estática)     │
-configuracoes.html      conta e zona de perigo ─┘   + js/config.js (sem footer, sem indexação)
-pagina.html             página pública blioo.app/seunome — espelho da pré-visualização
-                       → CSS: css/pagina.css + js/pagina.js (sem header, sem footer, sem guarda)
-privacidade.html        documentos legais — estáticos, sem JS, CSS: css/legal.css
-termos.html
+404.html                erro 404 (estática, sem JS)
+app/
+  entrar.html           tela de login    ─┐
+  criar-conta.html      tela de cadastro ─┴→ CSS: ../css/auth.css
+  onboarding.html       3 passos até publicar ─┴→ CSS: ../css/onboarding.css + js/onboarding.js
+  dashboard.html        visão geral ─┬→ CSS: ../css/dashboard.css
+  links.html            gestão de links │   + js/dashboard.js / js/links.js
+  aparencia.html        temas + preview │   + js/aparencia.js (cada página, seu módulo)
+  metricas.html         em breve        │   + js/app.js (só guarda + identidade)
+  dominio.html          em breve        │
+  configuracoes.html    conta e perigo ─┘   + js/config.js (sem footer, sem indexação)
+  pagina.html           página pública blioo.app/seunome — espelho da pré-visualização
+                       → CSS: ../css/pagina.css + js/pagina.js (sem header, sem footer, sem guarda)
+legal/
+  privacidade.html      documentos legais — estáticos, sem JS, CSS: ../css/legal.css
+  termos.html
 css/
   main.css              entrada: @import na ordem da cascata
   tokens.css            :root, dark mode, tokens (só aqui)
@@ -387,7 +390,8 @@ js/
 assets/                 fontes auto-hospedadas e imagens (ver §12)
 ```
 
-**Nova página HTML = mesma receita:** `<head>` padrão (metas, `color-scheme`, duplo `theme-color`, og:*, canonical, favicon, manifest, fontes, `css/main.css?v=N`), skip link, `<header class="hdr">` com `.pill.back`, `<main id="conteudo">`. **Sem `<footer>`** — rodapé é exclusivo da landing. Exceção única: `pagina.html` (pública e imersiva, sem header nem footer — ver §6.14).
+**Nova página HTML = mesma receita:** `<head>` padrão (metas, `color-scheme`, duplo `theme-color`, og:*, canonical, favicon, manifest, fontes, `../css/main.css?v=N` dentro de `app/` ou `legal/`), skip link, `<header class="hdr">` com `.pill.back`, `<main id="conteudo">`. **Sem `<footer>`** — rodapé é exclusivo da landing. Exceção única: `app/pagina.html` (pública e imersiva, sem header nem footer — ver §6.14).
+- **Pastas:** `app/` (telas do produto: conta, onboarding, painel, página pública), `legal/` (privacidade, termos), raiz (landing, 404, robots, sitemap). Caminhos sempre relativos (`../css/`, `../js/`, `../assets/` a partir das pastas) — nunca absolutos, para funcionar em qualquer subpath de deploy.
 - **Cache-busting:** toda referência local de CSS/JS leva `?v=N` (`css/main.css?v=2`, `js/dashboard.js?v=2`). Ao alterar qualquer `.css` ou `.js`, incremente o `N` em todos os HTMLs — sem isso o navegador pode servir a versão antiga do cache. Links entre páginas usam o nome do arquivo (`privacidade.html`, `termos.html`, `entrar.html`, `criar-conta.html`, `onboarding.html`) e âncoras da landing usam `index.html#secao`.
 
 - Um componente = um arquivo CSS nomeado + um bloco comentado no topo. Componente novo → novo arquivo + uma linha de `@import` em `main.css` (a ordem preserva a cascata: tokens → base → botões → header → hero → marquee → seções → motion).

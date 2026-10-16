@@ -25,13 +25,13 @@ export function initConfig(){
   if(btnOut) btnOut.addEventListener('click', function(){
     saveData(data);
     logout();
-    location.replace('index.html');
+    location.replace('../index.html');
   });
   var btnDel = $('btn-danger');
   if(btnDel) btnDel.addEventListener('click', function(){
     if(confirm('Excluir sua conta, sua página e todos os dados? Essa ação não pode ser desfeita.')){
       clearAll();
-      location.replace('index.html');
+      location.replace('../index.html');
     }
   });
 }

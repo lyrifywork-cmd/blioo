@@ -4,7 +4,7 @@ import { hasSession, hasOnboarding } from './session.js';
 // deslogado não muda nada; logado aponta tudo para o destino certo.
 export function initAccountLinks(){
   if(!hasSession()) return;
-  var dest = hasOnboarding() ? 'dashboard.html' : 'onboarding.html';
+  var dest = hasOnboarding() ? 'app/dashboard.html' : 'app/onboarding.html';
   document.querySelectorAll('a[href$="entrar.html"],a[href$="criar-conta.html"],a[href$="onboarding.html"]')
     .forEach(function(a){ a.setAttribute('href', dest); });
   var acts = document.querySelector('.acts');
